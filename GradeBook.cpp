@@ -16,7 +16,7 @@
  * =====================================================================================
  */
 /* #include <stdlib.h> */
-#include <string>
+/* #include <string> */
 #include <iostream>
 #include "GradeBook.h" // using quotes tells compiler to look in current dir
 		       // to find the GradeBook.h file. The brackets (<>) tell it

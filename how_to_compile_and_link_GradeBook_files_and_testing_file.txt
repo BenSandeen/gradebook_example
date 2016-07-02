@@ -1,0 +1,3 @@
+g++ -c -o GradeBook.o GradeBook.cpp
+g++ -c -o Testing_GradeBook.o Testing_GradeBook.cpp
+g++ -o executable_file_name GradeBook.o Testing_GradeBook.o
