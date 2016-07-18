@@ -23,6 +23,9 @@
 		       // to look in the standard location for built-in C++ libs
 using namespace std;
 
+int numStudentsInClass = 10;
+int numGradesReceivedPerStudent = 4;
+
 // constructor function that the compiler uses to instantiate a gradebook object
 GradeBook::GradeBook(string name) {
 	setCourseName(name); // uses the class's set function for robustness
@@ -38,4 +41,13 @@ string GradeBook::getCourseName() const {
 
 void GradeBook::displayCourseName() const {
 	cout << "Course name is: " << getCourseName() << endl;
+}
+
+void createStudentArray(array< array< float, numGradesReceivedPerStudent >,
+		numStudentsInClass > studentArr) {
+	studentArray = studentArr;
+}
+
+void createStudentVector( vector< vector< float > > studentVec) {
+	studentVector = studentVec;
 }

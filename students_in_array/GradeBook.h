@@ -16,9 +16,8 @@
  * =====================================================================================
  */
 #include <string> // courseName is stored as a string
-#include <array>
-#include <vector>
-
+#include <array> // use this for a static object, initialized at compile time
+#include <vector> // use this for a resizeable object to add/remove students
 // We still need to use the specifier `std::` before using the string library,
 // because we can't use `using namespace std;` in header files for some reason
 
@@ -31,8 +30,21 @@ public: // allows other programs to use these member functions
 	// indicating that they don't change the state of an object
 	std::string getCourseName() const; // gets courseName
 	void displayCourseName() const; // displays courseName
+	
+	// functions for setting up the *ARRAY* of students
+	// array of students, with each having an array for their grades
+	void createStudentArray(std::array < std::array< float > >); 
+
+	// functions for setting up the *VECTOR* of students
+	void createStudentVector();
+	void addStudentToVector( std::vector< float > ); // may need to add `&` after `>`
+
+	// takes index of student to be removed and returns vector of their grades
+	std::vector removeStudentFromVector( int index ); 
 private: // the data is hidden from other programs
 	std::string courseName; // the course's name is stored as a string
-	std::
+	std::array< std::array< float, numGradesReceivedPerStudent >,\
+		numStudentsInClass studentArray;
+	std::studentVector;
 }; // DON'T FORGET TO END THE CLASS DESCRIPTION WITH A SEMI-COLON 
 
