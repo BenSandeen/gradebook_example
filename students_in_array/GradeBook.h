@@ -33,7 +33,7 @@ public: // allows other programs to use these member functions
 	
 	// functions for setting up the *ARRAY* of students
 	// array of students, with each having an array for their grades
-	void createStudentArray(std::array < std::array< float > >); 
+	void createStudentArray(std::array < std::array< float, numGradesReceivedPerStudent >, numStudentsInClass >); 
 
 	// functions for setting up the *VECTOR* of students
 	void createStudentVector();
@@ -42,9 +42,11 @@ public: // allows other programs to use these member functions
 	// takes index of student to be removed and returns vector of their grades
 	std::vector removeStudentFromVector( int index ); 
 private: // the data is hidden from other programs
+	int numStudentsInClass = 10;
+	int numGradesReceivedPerStudent = 4;
 	std::string courseName; // the course's name is stored as a string
 	std::array< std::array< float, numGradesReceivedPerStudent >,\
 		numStudentsInClass studentArray;
-	std::studentVector;
+	std::vector< std::vector< float > grades(numGradesReceivedPerStudent) > studentVector(numStudentsInClass);
 }; // DON'T FORGET TO END THE CLASS DESCRIPTION WITH A SEMI-COLON 
 
