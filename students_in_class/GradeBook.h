@@ -16,6 +16,8 @@
  * =====================================================================================
  */
 #include <string> // courseName is stored as a string
+#include <vector>
+#include "Student.h"
 // We still need to use the specifier `std::` before using the string library,
 // because we can't use `using namespace std;` in header files for some reason
 

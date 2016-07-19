@@ -1,9 +1,9 @@
 /*
- * =====================================================================================
+ * ===============================================================================
  *
  *       Filename:  GradeBook.cpp
  *
- *    Description:  Defines the functions of the GradeBook class prototyped in GradeBook.h
+ *    Description:  Defines functions of GradeBook class prototyped in GradeBook.h
  *
  *        Version:  1.0
  *        Created:  07/01/2016 01:35:30 AM
@@ -13,7 +13,7 @@
  *         Author:  Ben Sandeen
  *   Organization:  
  *
- * =====================================================================================
+ * ===============================================================================
  */
 /* #include <stdlib.h> */
 /* #include <string> */
@@ -23,8 +23,8 @@
 		       // to look in the standard location for built-in C++ libs
 using namespace std;
 
-int numStudentsInClass = 10;
-int numGradesReceivedPerStudent = 4;
+/* int numStudentsInClass = 10; */
+/* int numGradesReceivedPerStudent = 4; */
 
 // constructor function that the compiler uses to instantiate a gradebook object
 GradeBook::GradeBook(string name) {
@@ -43,11 +43,10 @@ void GradeBook::displayCourseName() const {
 	cout << "Course name is: " << getCourseName() << endl;
 }
 
-void createStudentArray(array< array< float, numGradesReceivedPerStudent >,
-		numStudentsInClass > studentArr) {
+void GradeBook::createStudentArray(array< array< float, GradeBook::numGradesReceivedPerStudent >, GradeBook::numStudentsInClass > studentArr) {
 	studentArray = studentArr;
 }
 
-void createStudentVector( vector< vector< float > > studentVec) {
-	studentVector = studentVec;
+void GradeBook::createStudentVector( vector< vector< float > > studentVec) {
+	/* studentVector = studentVec; */
 }

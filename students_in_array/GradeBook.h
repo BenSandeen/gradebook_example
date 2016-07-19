@@ -1,5 +1,5 @@
 /*
- * =====================================================================================
+ * ==============================================================================
  *
  *       Filename:  GradeBook.h
  *
@@ -13,7 +13,7 @@
  *         Author:  Ben Sandeen 
  *   Organization:  
  *
- * =====================================================================================
+ * ==============================================================================
  */
 #include <string> // courseName is stored as a string
 #include <array> // use this for a static object, initialized at compile time
@@ -23,6 +23,11 @@
 
 class GradeBook {
 public: // allows other programs to use these member functions
+	
+	// these variables are used for size of array and vector objects
+	static const size_t numStudentsInClass = 10;
+	static const size_t numGradesReceivedPerStudent = 4;
+
 	explicit GradeBook(std::string); // constructor
 	void setCourseName(std::string); // sets courseName
 
@@ -36,17 +41,18 @@ public: // allows other programs to use these member functions
 	void createStudentArray(std::array < std::array< float, numGradesReceivedPerStudent >, numStudentsInClass >); 
 
 	// functions for setting up the *VECTOR* of students
-	void createStudentVector();
+	void createStudentVector( std::vector< std::vector< float > > studentVec );
 	void addStudentToVector( std::vector< float > ); // may need to add `&` after `>`
 
 	// takes index of student to be removed and returns vector of their grades
-	std::vector removeStudentFromVector( int index ); 
+	/* std::vector removeStudentFromVector( int index ); */ 
+	/* std::string removeStudentFromVector( int index ); */
 private: // the data is hidden from other programs
-	int numStudentsInClass = 10;
-	int numGradesReceivedPerStudent = 4;
+	/* int numStudentsInClass = 10; */
+	/* int numGradesReceivedPerStudent = 4; */
 	std::string courseName; // the course's name is stored as a string
-	std::array< std::array< float, numGradesReceivedPerStudent >,\
-		numStudentsInClass studentArray;
-	std::vector< std::vector< float > grades(numGradesReceivedPerStudent) > studentVector(numStudentsInClass);
+	std::array< std::array< float, numGradesReceivedPerStudent >, numStudentsInClass > studentArray;
+	/* std::vector< std::vector< float > grades(numGradesReceivedPerStudent) > studentVector(numStudentsInClass); */
+	std::vector< std::vector< float > > studentVector; //numStudentsInClass);
 }; // DON'T FORGET TO END THE CLASS DESCRIPTION WITH A SEMI-COLON 
 
