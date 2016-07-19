@@ -41,7 +41,7 @@ public: // allows other programs to use these member functions
 	void createStudentArray(std::array < std::array< float, numGradesReceivedPerStudent >, numStudentsInClass >); 
 
 	// functions for setting up the *VECTOR* of students
-	void createStudentVector( std::vector< std::vector< float > > studentVec );
+	void createStudentVector( std::vector< std::vector< float > > );
 	void addStudentToVector( std::vector< float > ); // may need to add `&` after `>`
 
 	// takes index of student to be removed and returns vector of their grades

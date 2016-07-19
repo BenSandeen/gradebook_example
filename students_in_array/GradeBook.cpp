@@ -48,5 +48,6 @@ void GradeBook::createStudentArray(array< array< float, GradeBook::numGradesRece
 }
 
 void GradeBook::createStudentVector( vector< vector< float > > studentVec) {
-	/* studentVector = studentVec; */
+	studentVector = studentVec;
 }
+
