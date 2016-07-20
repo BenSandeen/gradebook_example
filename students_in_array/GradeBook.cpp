@@ -51,3 +51,27 @@ void GradeBook::createStudentVector( vector< vector< float > > studentVec) {
 	studentVector = studentVec;
 }
 
+int GradeBook::getNumStudentsInVector() const{
+	return studentVector.size();
+}
+
+int GradeBook::getNumGradesPerStudentInVector() const{
+	return studentVector[0].size();
+}
+
+void GradeBook::displayStudentVector() const {
+	for (int student = 0; student < getNumStudentsInVector(); student++) {
+		cout << "Student #" << student << ":";
+		for (int grade = 0; grade < getNumGradesPerStudentInVector(); grade++) {
+			cout << "\t" << studentVector[student][grade];
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+void GradeBook::addStudentsToVector( int numStudentsToAdd ) {
+	for (int i = 0; i < numStudentsToAdd; i++ ) {
+		studentVector.push_back(vector< float >(getNumGradesPerStudentInVector()));
+	}
+}

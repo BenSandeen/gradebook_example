@@ -42,7 +42,10 @@ public: // allows other programs to use these member functions
 
 	// functions for setting up the *VECTOR* of students
 	void createStudentVector( std::vector< std::vector< float > > );
-	void addStudentToVector( std::vector< float > ); // may need to add `&` after `>`
+	int getNumStudentsInVector() const;
+	int getNumGradesPerStudentInVector() const;
+	void displayStudentVector() const;
+	void addStudentsToVector( int ); // may need to add `&` after `>`
 
 	// takes index of student to be removed and returns vector of their grades
 	/* std::vector removeStudentFromVector( int index ); */ 

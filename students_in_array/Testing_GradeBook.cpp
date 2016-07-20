@@ -71,5 +71,10 @@ int main() {
 	// parentheses with the number of elements the vector should
 	cout <<  vector< int >(2)[0] << vector< int >(2)[1] << endl;
 
+	gradeBook1.createStudentVector(studentVec);
+	gradeBook1.displayStudentVector();
+	gradeBook1.addStudentsToVector(3);
+	gradeBook1.displayStudentVector(); // should now have an additional student
+
 	return 0;
 }
